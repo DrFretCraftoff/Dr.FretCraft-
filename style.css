@@ -1,0 +1,473 @@
+/*==================================================
+                Dr.FretCraft - style.css
+==================================================*/
+
+/* RESET */
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+    font-family:'Poppins',sans-serif;
+    background:#0b0f16;
+    color:white;
+    overflow-x:hidden;
+}
+
+/* =========================
+        FOND ANIMÉ
+========================= */
+
+body::before{
+    content:"";
+    position:fixed;
+    inset:0;
+    z-index:-3;
+
+    background:
+    linear-gradient(rgba(0,0,0,.65),rgba(0,0,0,.75)),
+    linear-gradient(120deg,#133b17,#0b0f16,#16381c);
+
+    background-size:400% 400%;
+
+    animation:bg 18s ease infinite;
+}
+
+@keyframes bg{
+
+0%{
+background-position:0% 50%;
+}
+
+50%{
+background-position:100% 50%;
+}
+
+100%{
+background-position:0% 50%;
+}
+
+}
+
+/* Particules */
+
+body::after{
+
+content:"";
+
+position:fixed;
+
+left:0;
+top:0;
+
+width:100%;
+height:100%;
+
+background-image:
+radial-gradient(#39ff14 1px,transparent 1px),
+radial-gradient(#6eff6e 1px,transparent 1px);
+
+background-size:80px 80px,140px 140px;
+
+opacity:.18;
+
+animation:particles 50s linear infinite;
+
+pointer-events:none;
+
+z-index:-2;
+
+}
+
+@keyframes particles{
+
+0%{
+transform:translateY(0);
+}
+
+100%{
+transform:translateY(-600px);
+}
+
+}
+
+/* =========================
+        HEADER
+========================= */
+
+.header{
+
+position:sticky;
+
+top:0;
+
+display:flex;
+
+justify-content:space-between;
+
+align-items:center;
+
+padding:18px 8%;
+
+background:rgba(0,0,0,.45);
+
+backdrop-filter:blur(12px);
+
+border-bottom:1px solid rgba(255,255,255,.08);
+
+z-index:999;
+
+}
+
+/* =========================
+          LOGO
+========================= */
+
+.logo{
+
+display:flex;
+
+align-items:center;
+
+gap:15px;
+
+}
+
+.logo img{
+
+height:70px;
+
+transition:.35s;
+
+}
+
+.logo img:hover{
+
+transform:scale(1.08);
+
+filter:drop-shadow(0 0 18px #44ff44);
+
+}
+
+.logo h1{
+
+font-size:30px;
+
+color:#69ff5f;
+
+}
+
+/* =========================
+          MENU
+========================= */
+
+nav ul{
+
+display:flex;
+
+list-style:none;
+
+gap:35px;
+
+}
+
+nav a{
+
+text-decoration:none;
+
+color:white;
+
+font-weight:600;
+
+transition:.3s;
+
+position:relative;
+
+}
+
+nav a:hover{
+
+color:#69ff5f;
+
+}
+
+nav a.active{
+
+color:#69ff5f;
+
+}
+
+nav a::after{
+
+content:"";
+
+position:absolute;
+
+left:0;
+
+bottom:-6px;
+
+width:0;
+
+height:2px;
+
+background:#69ff5f;
+
+transition:.3s;
+
+}
+
+nav a:hover::after{
+
+width:100%;
+
+}
+
+/* =========================
+          HERO
+========================= */
+
+.hero{
+
+height:88vh;
+
+display:flex;
+
+justify-content:center;
+
+align-items:center;
+
+text-align:center;
+
+padding:30px;
+
+}
+
+.hero-content{
+
+max-width:900px;
+
+}
+
+.hero h2{
+
+font-size:70px;
+
+margin-bottom:25px;
+
+text-shadow:0 0 20px black;
+
+}
+
+.hero p{
+
+font-size:22px;
+
+line-height:1.8;
+
+opacity:.92;
+
+}
+
+/* =========================
+          BOUTON
+========================= */
+
+.btn{
+
+display:inline-block;
+
+margin-top:45px;
+
+padding:18px 42px;
+
+background:#35d43b;
+
+color:white;
+
+font-size:20px;
+
+font-weight:bold;
+
+border-radius:12px;
+
+text-decoration:none;
+
+transition:.35s;
+
+box-shadow:0 0 20px rgba(53,212,59,.5);
+
+}
+
+.btn:hover{
+
+background:#52ff59;
+
+transform:translateY(-6px);
+
+box-shadow:0 0 35px rgba(82,255,89,.8);
+
+}
+
+/* =========================
+          CARTES
+========================= */
+
+.cards{
+
+display:grid;
+
+grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+
+gap:35px;
+
+padding:80px 8%;
+
+}
+
+.card{
+
+background:rgba(255,255,255,.05);
+
+padding:35px;
+
+border-radius:18px;
+
+backdrop-filter:blur(10px);
+
+border:1px solid rgba(255,255,255,.08);
+
+transition:.35s;
+
+}
+
+.card:hover{
+
+transform:translateY(-10px);
+
+box-shadow:0 0 25px rgba(50,255,80,.35);
+
+}
+
+.card h3{
+
+margin-bottom:15px;
+
+color:#6dff6d;
+
+}
+
+.card p{
+
+line-height:1.7;
+
+}
+
+/* =========================
+          FOOTER
+========================= */
+
+footer{
+
+margin-top:80px;
+
+padding:50px 20px;
+
+background:#050505;
+
+text-align:center;
+
+border-top:2px solid #2eff52;
+
+}
+
+footer h3{
+
+margin-bottom:15px;
+
+font-size:28px;
+
+}
+
+footer a{
+
+display:inline-block;
+
+margin:20px 0;
+
+padding:14px 30px;
+
+background:#5865F2;
+
+color:white;
+
+text-decoration:none;
+
+border-radius:10px;
+
+transition:.3s;
+
+}
+
+footer a:hover{
+
+transform:scale(1.05);
+
+}
+
+footer p{
+
+margin-top:20px;
+
+color:#aaa;
+
+}
+
+/* =========================
+        RESPONSIVE
+========================= */
+
+@media(max-width:900px){
+
+.header{
+
+flex-direction:column;
+
+gap:20px;
+
+}
+
+nav ul{
+
+flex-wrap:wrap;
+
+justify-content:center;
+
+}
+
+.hero h2{
+
+font-size:42px;
+
+}
+
+.hero p{
+
+font-size:18px;
+
+}
+
+.logo img{
+
+height:55px;
+
+}
+
+}
