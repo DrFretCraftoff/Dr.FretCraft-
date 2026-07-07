@@ -124,7 +124,7 @@ if(javaBtn){
 
 javaBtn.onclick=()=>{
 
-copier("play.drfretcraft.fr");
+copier("drfretcraft.falix.gg");
 
 }
 
@@ -140,7 +140,7 @@ if(bedrockBtn){
 
 bedrockBtn.onclick=()=>{
 
-copier("play.drfretcraft.fr:19132");
+copier("drfretcraft.falix.gg:19132");
 
 }
 
